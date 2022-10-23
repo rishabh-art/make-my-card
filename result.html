@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<script>
+    var check=localStorage.getItem("form");
+    if(check==0) or (check==null);{
+        alert("You've not entered any data!");
+        location.replace("https://rishabh-art.github.io/make-my-card/")
+    }
+</script>
+<html>
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Shalimar">
+    <p id="printFirst"></p>
+    <style>
+        html{
+            background-color: black;
+        }
+        #printFirst{
+            text-align: center;
+            font-size: 2rem;
+            color: cornflowerblue;
+            font-family: cursive;
+            font-weight: bold;
+        }
+        #image1{
+            width:300px;
+            height: 200px;
+        }
+        .space{
+            color:black;
+            font-size: 64px;
+        }
+        #textPlace{
+            width: 1000px;
+            height:auto;
+
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:burlywood;
+
+        }
+        #signOff{
+                font-size: 20px;
+                font-family: fantasy;
+                color: darksalmon;
+            }
+        #name{
+            font-size: 48px;
+            font-family: Shalimar;
+            color:salmon
+        }
+        #print{
+            background-color: aqua;
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 10px;
+            font-size: 18px;
+        
+        }
+        #print:hover{
+            background-color: crimson;
+            color:beige;
+        }
+        p{
+            color:floralwhite;
+            font-size: 24px;
+            font-family: Shalimar;
+        }
+        
+    </style>
+    <marquee><img src="https://cdn.pixabay.com/photo/2018/10/23/00/49/diwali-3766773_960_720.jpg" id="image1"><!--BLACK BOX--><img src="https://w0.peakpx.com/wallpaper/372/707/HD-wallpaper-black-solid-plain-colors-dark-color-screen.jpg" id="image1"><img src="https://i.ibb.co/Bt5VhTv/diwali-3801824-960-720.jpg" id="image1"><img src="https://w0.peakpx.com/wallpaper/372/707/HD-wallpaper-black-solid-plain-colors-dark-color-screen.jpg" id="image1"><img src="https://i.ibb.co/r6LYx2T/diya-2923658-960-720.jpg" id="image1"><img src="https://w0.peakpx.com/wallpaper/372/707/HD-wallpaper-black-solid-plain-colors-dark-color-screen.jpg" id="image1"><img src="https://i.ibb.co/Bg9jkQM/diya-1782403-960-720.jpg" id="image1"><img src="https://w0.peakpx.com/wallpaper/372/707/HD-wallpaper-black-solid-plain-colors-dark-color-screen.jpg" id="image1"><img src="https://i.ibb.co/Bt5VhTv/diwali-3801824-960-720.jpg" id="image1"><img src="https://w0.peakpx.com/wallpaper/372/707/HD-wallpaper-black-solid-plain-colors-dark-color-screen.jpg" id="image1"><img src="https://cdn.pixabay.com/photo/2017/10/26/10/03/diwali-2890605_960_720.jpg" id="image1"><img src="https://w0.peakpx.com/wallpaper/372/707/HD-wallpaper-black-solid-plain-colors-dark-color-screen.jpg" id="image1"></marquee>
+    <p id="textPlace"></p>
+    <br><br>
+    <p id="signOff"></p>
+    <p id="name"></p>
+    <button onclick="printPage()" id="print">Print this page</button>
+    <p>Proudly designed by palrishabh.com</p>
+    </html>
+<script>
+    var by=localStorage.getItem("name");
+    var to=localStorage.getItem("for");
+    var text=localStorage.getItem("text");
+    var signoff=localStorage.getItem("signoff");
+    document.getElementById("printFirst").innerHTML="Happy Diwali, "+to+"!";
+    document.getElementById("textPlace").innerHTML=text;
+    document.getElementById("signOff").innerHTML=signoff;
+    document.getElementById("name").innerHTML=by;
+</script>
+<script>
+    function printPage(){
+        window.print();
+    }
+</script>
+<script>
+    localStorage.clear();
+</script>
