@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<form action="https://www.palrishabh.com/festivals/diwali/result">
+<label class="Question">What is your name?</label><br>
+<input type="text" id="name" class="input" required/>
+<br><br>
+<label class="Question">Who is this card for?</label><br>
+<input class="input" id="for" required><br><br>
+<label class="Question">Text which you would like to include in your card</label><br>
+<textarea class="input" id="text" required maxlength="800" minlength="300">Diwali, is the festival of lights. Diwali is to celebrate the returning of the great Lord Rama after killing Ravan. Taking this amazing opportunity, I would like to invite you to my diwali party! Make sure you come!</textarea><br><br>
+<label class="Question">Sign off(Optional):</label><br>
+<input class="input" id="signoff"/>
+<input class="submit" type="submit" value="Generate my card" onclick="redirect()">
+</form>
+<script>
+    var formChecked=0;
+    localStorage.setItem("form", formChecked);
+    function redirect(){
+    var name=document.getElementById("name").value;
+    var person=document.getElementById("for").value;
+    var text=document.getElementById("text").value;
+    var signoff=document.getElementById("signoff").value;
+    var formChecked=1;
+    localStorage.setItem("form", formChecked);
+
+    if(signoff==""){
+        signoff="Have a nice diwali,";
+    }
+    localStorage.setItem("name", name);
+    localStorage.setItem("for",person);
+    localStorage.setItem("text", text);
+    localStorage.setItem("signoff",signoff)
+    }
+</script>
+<style>
+    form{
+        background-color:bisque;
+        color:rgb(17, 44, 192);
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .input{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 18px;
+        background-color: brown;
+        color: aqua;
+        border-radius: 5px;
+        }
+    .submit{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: coral;
+        color:black;
+        border-radius: 25px;
+        font-size: 24px;
+    }
+    .submit:hover{
+        background-color: darkblue;
+        color:bisque;
+    }
+</style>
+</html>
